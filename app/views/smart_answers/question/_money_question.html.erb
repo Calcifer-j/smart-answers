@@ -1,4 +1,4 @@
-<%= render "smart_answers/inputs/caption", question: question %>
+<%= render "smart_answers/question/caption", question: question %>
 <%= render "govuk_publishing_components/components/input", {
   label: {
     text: question.title,
@@ -8,7 +8,8 @@
   id: "response",
   heading_size: "l",
   width: 10,
-  error_message: question.error,
-  hint: question.body,
-  value: prefill_value_for(question)
+  hint: question.hint_text,
+  suffix: question.suffix_label,
+  value: prefill_value_for(question),
+  error_message: question.error
 } %>
