@@ -34,4 +34,8 @@ class OutcomePresenter < NodePresenter
   def next_steps
     @renderer.content_for(:next_steps)
   end
+
+  def partial_template_name
+    "default"
+  end
 end
