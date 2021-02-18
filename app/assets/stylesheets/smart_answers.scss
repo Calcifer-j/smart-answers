@@ -58,8 +58,8 @@ $is-ie: false !default;
   }
   // This allows govspeak in hint component to have hint styling rather than govspeak
   .gem-c-hint {
-    .govuk-govspeak{
-      @extend .govuk-hint
+    .govuk-govspeak {
+      @extend .govuk-hint;
     }
   }
   // stylelint-enable scss/at-extend-no-missing-placeholder
