@@ -32,9 +32,11 @@ module SmartAnswer::Calculators
     end
 
     def self.tax_years
-      child_benefit_data.each_with_object([]) do |(key), tax_year|
+      unordered_tax_years = child_benefit_data.each_with_object([]) do |(key), tax_year|
         tax_year << key
       end
+
+      unordered_tax_years.reverse
     end
 
     def benefits_claimed_amount
