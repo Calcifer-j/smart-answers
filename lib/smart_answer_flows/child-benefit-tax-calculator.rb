@@ -23,7 +23,7 @@ module SmartAnswer
       end
 
       # Q2
-      multiple_choice :which_tax_year? do
+      radio :which_tax_year? do
         Calculators::ChildBenefitTaxCalculator.tax_years.each do |tax_year|
           option :"#{tax_year}"
         end
@@ -38,7 +38,7 @@ module SmartAnswer
       end
 
       # Q3
-      multiple_choice :is_part_year_claim? do
+      radio :is_part_year_claim? do
         option :yes
         option :no
 
@@ -82,7 +82,7 @@ module SmartAnswer
       end
 
       # Q3c
-      multiple_choice :add_child_benefit_stop? do
+      radio :add_child_benefit_stop? do
         option :yes
         option :no
 
@@ -136,7 +136,7 @@ module SmartAnswer
       end
 
       # Q5
-      multiple_choice :add_allowable_deductions? do
+      radio :add_allowable_deductions? do
         option :yes
         option :no
 
@@ -161,7 +161,7 @@ module SmartAnswer
       end
 
       # Q6
-      multiple_choice :add_other_allowable_deductions? do
+      radio :add_other_allowable_deductions? do
         option :yes
         option :no
 
